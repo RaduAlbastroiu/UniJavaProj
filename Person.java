@@ -9,26 +9,27 @@ package ood_lab;
  *
  * @author ducu
  */
-public class Person implements IobjectWithAge {
+public class Person implements IAgeingEntity {
 
-    private IobjectWithAge objectWithAge;
+    private IAgeingEntity ageEntity;
     
     private String name;
     
-    public Person(String name, IobjectWithAge objectWithAge) {
+    public Person(String name, IAgeingEntity objectWithAge) {
         this.name = name;
-        this.objectWithAge = objectWithAge;
+        this.ageEntity = objectWithAge;
     }
-    public boolean olderThanAge(IageEntity ageControl) {
-        return objectWithAge.olderThanAge(ageControl);
+    
+    public boolean olderThanAge(IAge ageControl) {
+        return ageEntity.olderThanAge(ageControl);
     }
 
-    public boolean olderThan(IobjectWithAge someObj) {
+    public boolean olderThan(IAgeingEntity someObj) {
         return someObj.olderThan(someObj);
     }
     
     public void print() {
         System.out.println(" This is a Person named: " + name);
-        objectWithAge.print();
+        ageEntity.print();
     }
 }

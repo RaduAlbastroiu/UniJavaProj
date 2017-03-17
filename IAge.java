@@ -9,9 +9,9 @@ package ood_lab;
  *
  * @author ducu
  */
-public interface IageEntity {
-    
-    public boolean greaterThan(IageEntity age);
+public interface IAge {
+
+    public boolean greaterThan(IAge age);
     
     public boolean greaterThanAge(int ageControl);
     

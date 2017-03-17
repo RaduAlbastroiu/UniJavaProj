@@ -9,27 +9,27 @@ package ood_lab;
  *
  * @author ducu
  */
-public class Building implements IobjectWithAge {
+public class Building implements IAgeingEntity {
 
-    private IobjectWithAge objectWithAge;
+    private IAgeingEntity ageEntity;
     
     private String street;
     
-    public Building(String street, IobjectWithAge objectWithAge) {
+    public Building(String street, IAgeingEntity objectWithAge) {
         this.street = street;
-        this.objectWithAge = objectWithAge;
+        this.ageEntity = objectWithAge;
     }
-    public boolean olderThanAge(IageEntity ageControl) {
-        return objectWithAge.olderThanAge(ageControl);
+    public boolean olderThanAge(IAge ageControl) {
+        return ageEntity.olderThanAge(ageControl);
     }
 
-    public boolean olderThan(IobjectWithAge someObj) {
-        return objectWithAge.olderThan(someObj);
+    public boolean olderThan(IAgeingEntity someObj) {
+        return ageEntity.olderThan(someObj);
     }
     
     public void print() {
         System.out.println(" This is a Building on street: " + street);
-        objectWithAge.print();
+        ageEntity.print();
     }
     
 }

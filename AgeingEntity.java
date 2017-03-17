@@ -9,22 +9,22 @@ package ood_lab;
  *
  * @author ducu
  */
-public abstract class ObjectWithAge implements IobjectWithAge {
+public abstract class AgeingEntity implements IAgeingEntity {
     
-    protected IageEntity age;
+    protected IAge age;
     
-    public ObjectWithAge(IageEntity age) {
+    public AgeingEntity(IAge age) {
         this.age = age;
     }
 
-    public boolean olderThanAge(IageEntity ageControl) {
+    public boolean olderThanAge(IAge ageControl) {
         if (age.greaterThan(ageControl)) {
             return true;
         }
         return false;
     }
 
-    public boolean olderThan(IobjectWithAge someObj) {
+    public boolean olderThan(IAgeingEntity someObj) {
         if (someObj.olderThanAge(age)) {
             return false;
         }

@@ -15,11 +15,11 @@ import java.util.Scanner;
  */
 public class Dialog {
     
-    private AgingEntitiesGroup base;
+    private GroupOfAgeingEntities base;
     
     private Scanner reader = new Scanner(System.in);
     
-    public Dialog(AgingEntitiesGroup base) {
+    public Dialog(GroupOfAgeingEntities base) {
         this.base = base;
     }
     
@@ -38,7 +38,7 @@ public class Dialog {
                 break;
             
             if(choice == 1) {
-                IobjectWithAge oldest = base.oldest();
+                IAgeingEntity oldest = base.oldest();
                 
                 System.out.println();
                 oldest.print();
@@ -47,12 +47,12 @@ public class Dialog {
             if(choice == 2) {
                 System.out.print(" Age: ");
                 int a = reader.nextInt();
-                IageEntity age = new ageEntity(a);
+                IAge age = new Age(a);
                 
-                List<IobjectWithAge> olderThan = base.olderThanAge(age);
+                List<IAgeingEntity> olderThan = base.olderThanAge(age);
                 
                 System.out.println();
-                for(IobjectWithAge obj:olderThan) {
+                for(IAgeingEntity obj:olderThan) {
                     obj.print();
                 }
             }

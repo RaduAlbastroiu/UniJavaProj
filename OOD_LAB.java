@@ -15,21 +15,22 @@ public class OOD_LAB {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO:
+        // builder for IAgeingEntity and Iage
         
-        AgingEntitiesGroup base = new AgingEntitiesGroup();
+        GroupOfAgeingEntities base = new GroupOfAgeingEntities();
         
-        IageEntity helperAgePerson = new ageEntity(25);
-        IobjectWithAge helperPerson = new ObjectWithAge(helperAgePerson) {};
-        IobjectWithAge person = new Person("Gicu", helperPerson);
+        IAge helperAgePerson = new Age(25);
+        IAgeingEntity helperPerson = new AgeingEntity(helperAgePerson) {};
+        IAgeingEntity person = new Person("Gicu", helperPerson);
         
-        IageEntity helperAgeBuilding = new ageEntity(37);
-        IobjectWithAge helperBuilding = new ObjectWithAge(helperAgeBuilding) {};
-        IobjectWithAge building = new Building("bvd Oltenia", helperBuilding);
+        IAge helperAgeBuilding = new Age(37);
+        IAgeingEntity helperBuilding = new AgeingEntity(helperAgeBuilding) {};
+        IAgeingEntity building = new Building("bvd Oltenia", helperBuilding);
         
-        IageEntity helperAgeDog = new ageEntity(7);
-        IobjectWithAge helperDog = new ObjectWithAge(helperAgeDog) {};
-        IobjectWithAge dog = new Dog("Bruno", helperDog);
+        IAge helperAgeDog = new Age(7);
+        IAgeingEntity helperDog = new AgeingEntity(helperAgeDog) {};
+        IAgeingEntity dog = new Dog("Bruno", helperDog);
         
         base.add(person);
         base.add(building);

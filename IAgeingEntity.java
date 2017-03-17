@@ -9,11 +9,11 @@ package ood_lab;
  *
  * @author ducu
  */
-public interface IobjectWithAge {
+public interface IAgeingEntity {
     
-    public boolean olderThan(IobjectWithAge someObj);
+    public boolean olderThan(IAgeingEntity someObj);
     
-    public boolean olderThanAge(IageEntity ageControl);
+    public boolean olderThanAge(IAge ageControl);
     
     public void print();
     

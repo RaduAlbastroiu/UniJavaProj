@@ -9,26 +9,27 @@ package ood_lab;
  *
  * @author ducu
  */
-public class Dog implements IobjectWithAge {
+public class Dog implements IAgeingEntity {
 
-    private IobjectWithAge objectWithAge;
+    private IAgeingEntity ageEntity;
     
     private String name;
     
-    public Dog(String name, IobjectWithAge objectWithAge) {
+    public Dog(String name, IAgeingEntity objectWithAge) {
         this.name = name;
-        this.objectWithAge = objectWithAge;
+        this.ageEntity = objectWithAge;
     }
-    public boolean olderThanAge(IageEntity ageControl) {
-        return objectWithAge.olderThanAge(ageControl);
+    
+    public boolean olderThanAge(IAge ageControl) {
+        return ageEntity.olderThanAge(ageControl);
     }
 
-    public boolean olderThan(IobjectWithAge someObj) {
-        return objectWithAge.olderThan(someObj);
+    public boolean olderThan(IAgeingEntity someObj) {
+        return ageEntity.olderThan(someObj);
     }
     
     public void print() {
         System.out.println(" This is a Dog named: " + name);
-        objectWithAge.print();
+        ageEntity.print();
     }
 }

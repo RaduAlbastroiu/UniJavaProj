@@ -9,15 +9,15 @@ package ood_lab;
  *
  * @author ducu
  */
-public class ageEntity implements IageEntity {
+public class Age implements IAge {
 
     private int age;
     
-    public ageEntity(int a) {
-        this.age = a;
+    public Age(int years) {
+        this.age = years;
     }
     
-    public boolean greaterThan(IageEntity ageObj) {
+    public boolean greaterThan(IAge ageObj) {
         return ageObj.greaterThanAge(age);
     }
 
