@@ -19,9 +19,9 @@ public abstract class AgeingEntity implements IAgeingEntity {
 
     public boolean olderThanAge(IAge ageControl) {
         if (age.greaterThan(ageControl)) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     public boolean olderThan(IAgeingEntity someObj) {

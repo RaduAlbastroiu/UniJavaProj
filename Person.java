@@ -25,7 +25,7 @@ public class Person implements IAgeingEntity {
     }
 
     public boolean olderThan(IAgeingEntity someObj) {
-        return someObj.olderThan(someObj);
+        return ageEntity.olderThan(someObj);
     }
     
     public void print() {
